@@ -1,0 +1,9 @@
+version: '2'
+services:
+  alerta-db:
+    image: mongodb
+  alerta-web:
+    ports:
+      - "80:80"
+    depends_on:
+      alerta-db
